@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import ProfilePicture from "@assets/img/profile.webp";
+---
+
+<section class="flex flex-row justify-between items-center py-20">
+  <div class="w-full flex flex-col">
+    <h1
+      class="font-pacifico text-[#fff] text-4xl lg:text-6xl text-center lg:text-start text-balance"
+    >
+      Hi, I'm <span class="text-[#7477FF]">M</span>atias, <br /> Web developer
+    </h1>
+    <p class="text-md text-[#fff] my-8 text-center lg:text-start">
+      Frontend Developer, Profficienct in React & Node
+    </p>
+  </div>
+  <div class="hidden lg:block">
+    <Image
+      class="rounded-xl shadow-md"
+      src={ProfilePicture}
+      alt="Imagen de perfil de Matias, tomando una taza de café"
+      width={600}
+    />
+  </div>
+</section>
