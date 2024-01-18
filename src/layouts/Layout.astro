@@ -5,6 +5,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
@@ -24,6 +25,7 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <SpeedInsights />
     <slot />
   </body>
 </html>
