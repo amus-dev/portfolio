@@ -1,28 +1,42 @@
 ---
 const MENU_LINKS = [
   {
-    name: "Sobre mi",
-    href: "/",
+    name: "Proyectos",
+    href: "/#projects",
   },
   {
-    name: "Proyectos",
-    href: "/",
+    name: "Sobre mi",
+    href: "/#me",
   },
   {
     name: "Contacto",
-    href: "/",
+    href: "/#contact",
   },
   {
     name: "CV",
     href: "/",
   },
 ];
+
+import { Image } from "astro:assets";
+import Logo from "@assets/img/logos/logo.svg";
 ---
 
 <nav
   class="flex flex-row items-center justify-between px-10 py-7 md:px-20 xl:px-72"
 >
-  <a class="text-xs font-bold text-[#fff]" href="/">{`<AMUSCODE/>`}</a>
+  <a
+    class="text-xs font-bold text-[#fff]"
+    href="/"
+    aria-label="Link a la página principal del portafolio"
+  >
+    <Image
+      class="transition-all duration-300 hover:scale-105"
+      src={Logo}
+      alt="Logo de AMUSCODE, el nombre de mi portafolio"
+      width={120}
+    />
+  </a>
   <ul class="flex flex-row gap-2">
     {
       MENU_LINKS.map((link) => (
