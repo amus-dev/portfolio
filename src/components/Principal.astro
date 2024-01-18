@@ -3,15 +3,20 @@ import { Image } from "astro:assets";
 import ProfilePicture from "@assets/img/profile.webp";
 ---
 
-<section class="flex flex-row justify-between items-center py-20">
-  <div class="w-full flex flex-col">
+<section
+  class="flex flex-row items-center justify-between px-10 py-20 md:px-20 xl:px-72"
+>
+  <div class="flex w-full flex-col">
     <h1
-      class="font-pacifico text-[#fff] text-4xl lg:text-6xl text-center lg:text-start text-balance"
+      class="text-balance text-center font-pacifico text-4xl text-[#fff] lg:text-start lg:text-6xl"
     >
-      Hi, I'm <span class="text-[#7477FF]">M</span>atias, <br /> Web developer
+      Hi, I'm <span class="text-[#7477FF]">M</span>atias, <br /> Desarrollador de
+      Software
     </h1>
-    <p class="text-md text-[#fff] my-8 text-center lg:text-start">
-      Frontend Developer, Profficienct in React & Node
+    <p class="text-md my-8 text-center text-[#fff] lg:text-start">
+      Seis años de experiencia, especializado en <span
+        class="font-bold text-[#7477FF]">Frontend</span
+      >. He entregado soluciones de alta calidad en entornos dinámicos.
     </p>
   </div>
   <div class="hidden lg:block">

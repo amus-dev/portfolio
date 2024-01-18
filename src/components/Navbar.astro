@@ -2,31 +2,33 @@
 const MENU_LINKS = [
   {
     name: "Sobre mi",
-    href: "http://",
+    href: "/",
   },
   {
     name: "Proyectos",
-    href: "http://",
+    href: "/",
   },
   {
     name: "Contacto",
-    href: "http://",
+    href: "/",
   },
   {
     name: "CV",
-    href: "http://",
+    href: "/",
   },
 ];
 ---
 
-<nav class="pt-7 pb-7 flex flex-row justify-between items-center">
-  <a class="text-[#fff] text-xs" href="http://">A</a>
+<nav
+  class="flex flex-row items-center justify-between px-10 py-7 md:px-20 xl:px-72"
+>
+  <a class="text-xs font-bold text-[#fff]" href="/">{`<AMUSCODE/>`}</a>
   <ul class="flex flex-row gap-2">
     {
       MENU_LINKS.map((link) => (
         <li>
           <a
-            class="text-[#fff] text-2xs md:text-xs uppercase transition-all hover:bg-[#7477FF] rounded-md"
+            class="rounded-md p-2 text-2xs uppercase text-[#fff] transition-all duration-300 hover:bg-[#7477FF] md:text-xs"
             href={link.href}
           >
             {link.name}
