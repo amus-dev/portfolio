@@ -1,10 +1,21 @@
 ---
 import { Image } from "astro:assets";
 import ProfilePicture from "@assets/img/profile.webp";
-// import IconJavaScript from "@assets/icons/javascript.svg";
-// import IconTypeScript from "@assets/icons/typescript.svg";
-// import IconReact from "@assets/icons/react.svg";
-// import IconAstro from "@assets/icons/astro.svg";
+// ICONS SKILLS
+import IconJavaScript from "@assets/icons/javascript.astro";
+import IconTypeScript from "@assets/icons/typescript.astro";
+import IconTailwind from "@assets/icons/tailwind.astro";
+import IconAstro from "@assets/icons/astroIcon.astro";
+import IconWordPress from "@assets/icons/wordpress.astro";
+import IconPHP from "@assets/icons/php.astro";
+import IconMysql from "@assets/icons/mysql.astro";
+import IconReact from "@assets/icons/react.astro";
+import IconFigma from "@assets/icons/figma.astro";
+import IconVite from "@assets/icons/vite.astro";
+import IconRedux from "@assets/icons/redux.astro";
+import IconExpo from "@assets/icons/expo.astro";
+import IconApple from "@assets/icons/apple.astro";
+import IconAndroid from "@assets/icons/android.astro";
 ---
 
 <section
@@ -25,56 +36,72 @@ import ProfilePicture from "@assets/img/profile.webp";
     >
       Sobre Mí
     </h2>
-    <p class="text-md text-pretty text-white">
-      Desarrollador de software con seis años de experiencia y una pasión
-      constante por aprender. Consumo activamente contenido de desarrollo en
-      YouTube para mantenerme actualizado. Además de mis sólidas habilidades
-      técnicas, me destaco por ser proactivo y adaptable. Mi capacidad para
-      trabajar en equipos, comunicarme claramente y fomentar la colaboración ha
-      sido clave en mi carrera. Si buscas un desarrollador con experiencia
-      técnica y habilidades blandas excepcionales, estoy entusiasmado por la
-      oportunidad de contribuir a tu equipo.
-      <br />¡Espero hablar más sobre cómo puedo aportar a tus proyectos!
+    <p class="text-md my-3 text-pretty text-white">
+      Soy Alexander pero la gente mas cercana me dice Matias (mi segundo
+      nombre), apasionado por crear soluciones tecnológicas innovadoras. Mi
+      carrera ha estado marcada por proyectos desafiantes y gratificantes.
     </p>
+    <p class="text-md my-3 text-pretty text-white">
+      Uno de mis logros más significativos ha sido desarrollar la comunicación
+      entre la app Coopeuch y Passcoopeuch, facilitando transacciones seguras y
+      eficientes. Este proyecto resalta mi habilidad para integrar sistemas
+      complejos de manera exitosa.
+    </p>
+    <p class="text-md my-3 text-pretty text-white">
+      Poseo una sólida experiencia en el desarrollo de aplicaciones y la
+      integración de sistemas. Si buscas un profesional dedicado y creativo para
+      tu próximo proyecto, ¡no dudes en contactarme! Juntos podemos llevar tus
+      ideas al siguiente nivel.
+    </p>
+
     <section>
       <h3 class="text-lg mt-5 font-bold text-white">
         Tecnologías con las que he trabajado
       </h3>
-      <div class="mt-5 flex flex-row gap-3">
-        <!-- <Image
-          class="brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-          src={IconJavaScript}
-          alt="Imagen de perfil de Matias, tomando una taza de café"
-          width={30}
+      <div class="mt-5 grid grid-cols-7 place-content-center gap-2">
+        <IconJavaScript
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
         />
-        <Image
-          class="brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-          src={IconTypeScript}
-          alt="Imagen de perfil de Matias, tomando una taza de café"
-          width={30}
+        <IconTypeScript
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
         />
-        <Image
-          class="brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-          src={IconReact}
-          alt="Imagen de perfil de Matias, tomando una taza de café"
-          width={30}
+        <IconReact
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
         />
-        <Image
-          class="brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-          src={IconAstro}
-          alt="Imagen de perfil de Matias, tomando una taza de café"
-          width={30}
+        <IconExpo
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
         />
-        <Image
-          class="brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-          src={IconJavaScript}
-          alt="Imagen de perfil de Matias, tomando una taza de café"
-          width={30}
-        /> -->
+        <IconApple
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+        />
+        <IconAndroid
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+        />
+        <IconRedux
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+        />
+        <IconAstro
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+        />
+        <IconTailwind
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+        />
+        <IconPHP
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+        />
+        <IconWordPress
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+        />
+        <IconMysql
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+        />
+        <IconFigma
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+        />
+        <IconVite
+          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+        />
       </div>
-
-      <!-- TO DO: -->
-      <!-- DEJAR ICONOS EN UN ARRAY MAP -->
     </section>
   </div>
 </section>
