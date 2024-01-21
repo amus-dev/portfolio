@@ -1,3 +1,39 @@
-<footer class="px-10 py-5 md:px-20 xl:px-72">
-  <p class="text-white">FOOTER</p>
+---
+import IconLinkedin from "@assets/icons/linkedin.astro";
+import IconGithub from "@assets/icons/github.astro";
+import IconGmail from "@assets/icons/gmail.astro";
+---
+
+<footer class="flex flex-row justify-between px-10 py-5 md:px-20 xl:px-72">
+  <a href="http://"> Logo</a>
+  <ul class="flex flex-row gap-5">
+    <li>
+      <a
+        href="https://www.linkedin.com/in/codeamus/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link con la url al linkedin de Matias"
+      >
+        <IconLinkedin className="size-5 transition-all hover:scale-110" />
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://github.com/amus-dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link con la url al github de Matias"
+      >
+        <IconGithub className="size-5 transition-all hover:scale-110" />
+      </a>
+    </li>
+    <li>
+      <a
+        href="mailto:contact@codeamus.dev"
+        aria-label="Link para abril el email y enviar un correo a Matias"
+      >
+        <IconGmail className="size-5 transition-all hover:scale-110" />
+      </a>
+    </li>
+  </ul>
 </footer>

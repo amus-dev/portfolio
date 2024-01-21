@@ -2,19 +2,20 @@
 const MENU_LINKS = [
   {
     name: "Proyectos",
-    href: "/#projects",
+    href: "/#proyectos",
   },
   {
     name: "Sobre mi",
-    href: "/#me",
+    href: "/#sobre-mi",
   },
   {
-    name: "Contacto",
-    href: "/#contact",
+    name: "Experiencia",
+    href: "/#experiencia",
   },
   {
     name: "CV",
-    href: "/",
+    href: "/cv_alexander.pdf",
+    newTab: true,
   },
 ];
 
@@ -44,6 +45,8 @@ import Logo from "@assets/img/logos/logo.svg";
           <a
             class="rounded-md p-2 text-2xs uppercase text-[#fff] transition-all duration-300 hover:bg-[#7477FF] md:text-xs"
             href={link.href}
+            target={link.newTab ? "_blank" : "_self"}
+            rel="noopener noreferrer"
           >
             {link.name}
           </a>
