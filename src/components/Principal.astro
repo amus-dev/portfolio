@@ -4,7 +4,7 @@ import ProfilePicture from "@assets/img/profile.webp";
 ---
 
 <section
-  class="flex flex-row items-center justify-between px-10 py-10 md:px-20 md:py-20 xl:px-72"
+  class="flex flex-col items-center justify-between px-10 py-10 md:flex-row md:px-20 md:py-20 xl:px-72"
 >
   <div class="flex w-full flex-col">
     <h1
@@ -13,13 +13,15 @@ import ProfilePicture from "@assets/img/profile.webp";
       Hola, Soy <span class="text-[#7477FF]">M</span>atias, <br /> Desarrollador
       de Software
     </h1>
-    <p class="text-md my-8 text-center text-[#fff] lg:text-start">
+    <p
+      class="text-md my-8 max-w-lg text-balance text-center text-[#fff] lg:text-start"
+    >
       Seis años de experiencia, especializado en <span
         class="font-bold text-[#7477FF]">Frontend</span
       >. He entregado soluciones de alta calidad en entornos dinámicos.
     </p>
   </div>
-  <div class="hidden lg:block">
+  <div class="block">
     <Image
       class="rounded-xl shadow-md"
       src={ProfilePicture}
