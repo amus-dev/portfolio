@@ -19,14 +19,14 @@ const MENU_LINKS = [
   },
 ];
 
-import { Image } from "astro:assets";
-import Logo from "@assets/img/logos/logo.svg";
+// import { Image } from "astro:assets";
+// import Logo from "@assets/img/logos/logo.svg";
 ---
 
 <nav
   class="flex flex-row items-center justify-between px-10 py-7 md:px-20 xl:px-72"
 >
-  <a
+  <!-- <a
     class="text-xs font-bold text-[#fff]"
     href="/"
     aria-label="Link a la página principal del portafolio"
@@ -37,7 +37,7 @@ import Logo from "@assets/img/logos/logo.svg";
       alt="Logo de CodeAmus, el nombre mio como empresa"
       width={80}
     />
-  </a>
+  </a> -->
   <ul class="flex flex-row gap-2">
     {
       MENU_LINKS.map((link) => (
