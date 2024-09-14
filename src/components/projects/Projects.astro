@@ -16,20 +16,17 @@ import projects from "@config/data.proyects.json";
       Proyectos
     </h2>
   </div>
-  <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
     {
       projects.map((project) => (
         <article class="mb-5">
           <div class="header">
-            <a href={project.slug}>
-              <h3 class="group relative mb-3 w-fit text-xl font-bold text-[#7477FF] transition-colors duration-500 hover:text-white">
-                {project.name}
-                <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
-              </h3>
-              <p class="text-md mb-5 text-pretty text-white">
-                {project.shortDescription}
-              </p>
-            </a>
+            <h3 class="group relative mb-3 w-fit text-xl font-bold text-[#7477FF]">
+              {project.name}
+            </h3>
+            <p class="text-md mb-5 text-pretty text-white">
+              {project.shortDescription}
+            </p>
           </div>
           <div class="body">
             <a href={project.slug}>
