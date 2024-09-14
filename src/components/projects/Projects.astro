@@ -1,0 +1,78 @@
+---
+import IconGithub from "@assets/icons/github.astro";
+import IconWebSite from "@assets/icons/world.astro";
+
+import projects from "@config/data.proyects.json";
+---
+
+<section
+  id="proyectos"
+  class="flex flex-col justify-between gap-8 bg-[#1E293B] px-10 py-20 md:px-20 xl:px-72"
+>
+  <div class="w-fit">
+    <h2
+      class="mb-5 w-fit border-b-4 border-solid text-2xl font-bold text-white"
+    >
+      Proyectos
+    </h2>
+  </div>
+  <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      projects.map((project) => (
+        <article class="mb-5">
+          <div class="header">
+            <a href={project.slug}>
+              <h3 class="group relative mb-3 w-fit text-xl font-bold text-[#7477FF] transition-colors duration-500 hover:text-white">
+                {project.name}
+                <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+              </h3>
+              <p class="text-md mb-5 text-pretty text-white">
+                {project.shortDescription}
+              </p>
+            </a>
+          </div>
+          <div class="body">
+            <a href={project.slug}>
+              <img
+                class="w-full rounded-md brightness-50 transition-all duration-300 hover:brightness-100"
+                src={project.image}
+                alt="Captura de pantalla del proyecto Cheffify en mi portafolio, mostrando la interfaz y funcionalidades implementadas"
+              />
+            </a>
+          </div>
+          <div class="footer">
+            <a href={project.slug}>
+              <p class="text-lg group relative mb-3 mt-4 w-fit text-[#7477FF] transition-colors duration-500 hover:text-white">
+                Más información
+                <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+              </p>
+            </a>
+            <ul class="my-7 flex flex-row gap-3">
+              <li>
+                <a
+                  class="hover:animate-pulse"
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visitar el repositorio Github de Cheffify"
+                >
+                  <IconGithub className="size-6" color="#fff" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={project.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visitar el sitio web de Cheffify"
+                >
+                  <IconWebSite className="size-6" color="#fff" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
