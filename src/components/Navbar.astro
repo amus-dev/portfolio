@@ -30,17 +30,38 @@ import Logo from "@assets/img/logos/logo.webp";
       width={120}
     />
   </a>
-  <ul class="flex flex-row gap-2">
+  <ul class="flex flex-row items-center gap-2">
     {
       MENU_LINKS.map((link) => (
         <li>
           <a
-            class="rounded-md p-2 text-xs uppercase text-[#fff] transition-all duration-300 hover:bg-[#7477FF]"
+            class="flex items-center gap-2 rounded-md p-2 text-xs uppercase text-[#fff] transition-all duration-300 hover:bg-[#7477FF]"
             href={link.href}
             target={link.newTab ? "_blank" : "_self"}
             rel="noopener noreferrer"
           >
-            {link.name}
+            {link.newTab ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-file-cv size-5"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                <path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
+                <path d="M13 11l1.5 6l1.5 -6" />
+              </svg>
+            ) : (
+              <span>{link.name}</span>
+            )}
           </a>
         </li>
       ))
