@@ -4,6 +4,9 @@ import Layout from "@layouts/Layout.astro";
 import Footer from "@components/Footer.astro";
 
 const { slug } = Astro.params;
+import projects from "@config/data.proyects.json";
+const project = projects.find((project) => project.slug === slug);
+import IconReact from "@assets/icons/react.astro";
 ---
 
 <Layout
@@ -11,9 +14,35 @@ const { slug } = Astro.params;
   description="¡Bienvenido a mi portafolio! Soy un apasionado desarrollador de software con seis años de experiencia. Explora mi perfil para descubrir proyectos innovadores, soluciones creativas y mi dedicación para crear software de calidad. ¡Conoce más sobre mi trayectoria y habilidades en el mundo del desarrollo de software!"
 >
   <Navbar />
-  <main>
-    {slug}
-    <!-- <Contact /> -->
+  <main class="px-10 py-7 md:px-20 xl:px-72">
+    <section>
+      <h1 class="text-3xl font-bold text-[#7477FF]">
+        Proyecto - {project?.name}
+      </h1>
+      <img
+        src={project?.image_single_desktop}
+        alt={`Imagen demostrativa versión escritorio del sitio web ${project?.name}`}
+        class="mt-5 hidden w-full lg:block"
+      />
+      <img
+        src={project?.image_single_mobile}
+        alt={`Imagen demostrativa versión mobile del sitio web ${project?.name}`}
+        class="mt-5 block w-full lg:hidden"
+      />
+    </section>
+    <section>
+      <h2 class="mt-5 text-2xl font-bold text-[#7477FF]">Descripción</h2>
+      <p class="text-lg mt-3 text-pretty text-white">{project?.description}</p>
+      <h2 class="my-4 text-2xl font-bold text-[#7477FF]">Tecnologías</h2>
+
+      <ul>
+        <li>
+          <IconReact
+            className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+          />
+        </li>
+      </ul>
+    </section>
   </main>
   <Footer />
 </Layout>
