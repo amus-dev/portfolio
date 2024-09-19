@@ -4,7 +4,7 @@ slug: cheffify
 description: Cheffify es un ecommerce de comida congelada, desarrollado en React JS con pagos seguros de Transbank y admin en WordPress.
 image_desktop: /assets/images/projects/project_desktop_cheffify.webp
 image_mobile: /assets/images/projects/project_mobile_cheffify.webp
-website: "https://cheffify.cl",
+website: "https://cheffify.cl"
 github: "https://github.com/amus-dev/cheffify"
 ---
 

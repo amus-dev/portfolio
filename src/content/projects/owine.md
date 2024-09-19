@@ -4,7 +4,7 @@ slug: owine
 description: Desarrollé el sitio Ö-61 con Astro, PHP y MySQL. Los usuarios comparten historias sobre Ami James para ganar un tatuaje.
 image_desktop: /assets/images/projects/project_desktop_owine.webp
 image_mobile: /assets/images/projects/project_mobile_owine.webp
-website: "https://sessions.o61wine.com",
+website: "https://sessions.o61wine.com"
 github: "https://github.com/amus-dev/owine"
 ---
 
