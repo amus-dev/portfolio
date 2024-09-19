@@ -1,12 +1,27 @@
 ---
 import Navbar from "@components/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
-import Footer from "@components/Footer.astro";
-
-const { slug } = Astro.params;
-import projects from "@config/data.proyects.json";
-const project = projects.find((project) => project.slug === slug);
 import IconReact from "@assets/icons/react.astro";
+import Footer from "@components/Footer.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+
+const { data, slug } = project;
+const { title, description, image_desktop, image_mobile, github, website } =
+  data;
+
+const { Content } = await render(project);
+export const prerender = true;
 ---
 
 <Layout
@@ -18,26 +33,27 @@ import IconReact from "@assets/icons/react.astro";
     <section>
       <h1
         class="text-3xl font-bold text-[#7477FF]"
-        transition:name={`name-${project?.name}`}
+        transition:name={`name-${title}`}
       >
-        {project?.name}
+        {title}
       </h1>
+
       <img
-        transition:name={`img-${project?.slug}`}
-        src={project?.image_single_desktop}
-        alt={`Imagen demostrativa versión escritorio del sitio web ${project?.name}`}
+        transition:name={`img-${slug}`}
+        src={image_desktop}
+        alt={`Imagen demostrativa versión escritorio del sitio web ${title}`}
         class="mt-5 hidden w-full rounded-lg lg:block"
       />
       <img
-        transition:name={`img-${project?.slug}`}
-        src={project?.image_single_mobile}
-        alt={`Imagen demostrativa versión mobile del sitio web ${project?.name}`}
+        transition:name={`img-${slug}`}
+        src={image_mobile}
+        alt={`Imagen demostrativa versión mobile del sitio web ${title}`}
         class="mt-5 block w-full rounded-lg lg:hidden"
       />
     </section>
     <section>
       <h2 class="mt-5 text-2xl font-bold text-[#7477FF]">Descripción</h2>
-      <p class="text-lg mt-3 text-pretty text-white">{project?.description}</p>
+      <p class="text-lg mt-3 text-pretty text-white">{description}</p>
       <h2 class="my-4 text-2xl font-bold text-[#7477FF]">Tecnologías</h2>
       <ul>
         <li>
