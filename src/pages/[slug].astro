@@ -1,33 +1,30 @@
 ---
+import IconGithub from "@assets/icons/github.astro";
+import IconWebSite from "@assets/icons/world.astro";
+import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
-import IconReact from "@assets/icons/react.astro";
-import Footer from "@components/Footer.astro";
+import { skills, type Technology } from "@utils/skills";
 import { getCollection, render } from "astro:content";
-
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
-
   return projects.map((project) => ({
     params: { slug: project.slug },
     props: { project },
   }));
 }
-
 const { project } = Astro.props;
-
 const { data, slug } = project;
 const {
   title,
-  description,
   image_desktop,
   image_mobile,
   github,
   website,
   metaTitle,
   metaDescription,
+  technologies,
 } = data;
-
 const { Content } = await render(project);
 export const prerender = true;
 ---
@@ -62,13 +59,49 @@ export const prerender = true;
         <Content />
       </div>
       <h2 class="mt-8 text-2xl font-bold text-[#7477FF]">Tecnologías</h2>
-      <ul>
-        <li>
-          <IconReact
-            className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-          />
-        </li>
+      <ul class="mt-4 flex items-center gap-4">
+        {
+          technologies.map((tech) => {
+            const techKey = tech.toLowerCase() as Technology;
+
+            const skill = skills.find(
+              (s) => s.name.toLowerCase() === techKey.toLowerCase()
+            );
+
+            if (!skill) {
+              console.warn(`No icon found for technology: ${tech}`);
+              return null;
+            }
+
+            return (
+              <skill.component
+                className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+                aria-label={skill.name}
+              />
+            );
+          })
+        }
       </ul>
+      <div class="mt-6 flex justify-end gap-4">
+        <a
+          class="hover:animate-pulse"
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visitar el repositorio Github de Cheffify"
+        >
+          <IconGithub className="size-8" color="#fff" />
+        </a>
+        <a
+          class="hover:animate-pulse"
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visitar el repositorio Github de Cheffify"
+        >
+          <IconWebSite className="size-8" color="#fff" />
+        </a>
+      </div>
     </section>
   </main>
   <Footer />

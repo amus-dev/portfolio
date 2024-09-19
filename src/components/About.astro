@@ -1,38 +1,7 @@
 ---
-import { Image } from "astro:assets";
 import ProfilePicture from "@assets/img/about-me.webp";
-// ICONS SKILLS
-import IconJavaScript from "@assets/icons/javascript.astro";
-import IconTypeScript from "@assets/icons/typescript.astro";
-import IconTailwind from "@assets/icons/tailwind.astro";
-import IconAstro from "@assets/icons/astroIcon.astro";
-import IconWordPress from "@assets/icons/wordpress.astro";
-import IconPHP from "@assets/icons/php.astro";
-import IconMysql from "@assets/icons/mysql.astro";
-import IconReact from "@assets/icons/react.astro";
-import IconFigma from "@assets/icons/figma.astro";
-import IconVite from "@assets/icons/vite.astro";
-import IconRedux from "@assets/icons/redux.astro";
-import IconExpo from "@assets/icons/expo.astro";
-import IconApple from "@assets/icons/apple.astro";
-import IconAndroid from "@assets/icons/android.astro";
-
-const skills = [
-  { component: IconJavaScript, alt: "JavaScript" },
-  { component: IconTypeScript, alt: "TypeScript" },
-  { component: IconReact, alt: "React" },
-  { component: IconExpo, alt: "Expo" },
-  { component: IconApple, alt: "Apple" },
-  { component: IconAndroid, alt: "Android" },
-  { component: IconRedux, alt: "Redux" },
-  { component: IconAstro, alt: "Astro" },
-  { component: IconTailwind, alt: "Tailwind" },
-  { component: IconPHP, alt: "PHP" },
-  { component: IconWordPress, alt: "WordPress" },
-  { component: IconMysql, alt: "MySQL" },
-  { component: IconFigma, alt: "Figma" },
-  { component: IconVite, alt: "Vite" },
-];
+import { skills } from "@utils/skills";
+import { Image } from "astro:assets";
 ---
 
 <section
@@ -76,11 +45,8 @@ const skills = [
       </h3>
       <div class="mt-5 grid grid-cols-7 place-content-center gap-6">
         {
-          skills.map(({ component: Icon, alt }) => (
-            <Icon
-              className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-              aria-label={alt}
-            />
+          skills.map(({ component: Icon }) => (
+            <Icon className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100" />
           ))
         }
       </div>

@@ -8,6 +8,14 @@ website: "https://cheffify.cl"
 github: "https://github.com/amus-dev/cheffify"
 metaTitle: Codeamus | Proyecto Cheffify - Ecommerce de Comida Congelada con React y PHP
 metaDescription: En Codeamus, desarrollé Cheffify, un ecommerce de comida congelada a domicilio en Santiago. El frontend fue construido con React, Vite y Tailwind, mientras que el backend empleó PHP, MySQL y Transbank para pagos seguros. Colaboración en diseño UX/UI y optimización SEO para visibilidad máxima.
+technologies:
+  - javascript
+  - react
+  - vite
+  - tailwind
+  - php
+  - mysql
+  - wordpress
 ---
 
 Desarrollé un ecommerce especializado en la venta y entrega de comida congelada a domicilio en toda la región metropolitana de Santiago. El proyecto fue construido utilizando una arquitectura moderna, con **React**, **Vite**, **Tailwind** y **JavaScript** en el frontend, garantizando una experiencia de usuario ágil y dinámica.
