@@ -1,15 +1,15 @@
 ---
 title: Cheffify
 slug: cheffify
-description: Cheffify es un ecommerce de comida congelada, desarrollado en React JS con pagos seguros de Transbank y admin en WordPress.
+description: Ecommerce de comida congelada en Santiago, con tecnología React, PHP y pagos seguros vía Transbank.
 image_desktop: /assets/images/projects/project_desktop_cheffify.webp
 image_mobile: /assets/images/projects/project_mobile_cheffify.webp
 website: "https://cheffify.cl"
 github: "https://github.com/amus-dev/cheffify"
 ---
 
-Cheffify es un innovador ecommerce especializado en la venta de deliciosa comida congelada, entregada directamente en tu hogar. Este proyecto refleja mi compromiso con la comodidad y la calidad en el mundo de la gastronomía online.
+Desarrollé un ecommerce especializado en la venta y entrega de comida congelada a domicilio en toda la región metropolitana de Santiago. El proyecto fue construido utilizando una arquitectura moderna, con **React**, **Vite**, **Tailwind** y **JavaScript** en el frontend, garantizando una experiencia de usuario ágil y dinámica.
 
-Desarrollé Cheffify utilizando React JS para una experiencia de usuario fluida y dinámica, garantizando así una navegación intuitiva y atractiva. Para el administrador, elegí WordPress por su flexibilidad y facilidad de uso, integrando además la pasarela de pago de Transbank para asegurar transacciones seguras y confiables.
+En la capa del backend, se empleó **PHP** y **MySQL** para gestionar las bases de datos y procesos del servidor, integrando la pasarela de pago de **Transbank** para asegurar transacciones rápidas y seguras. El diseño del sitio fue creado en estrecha colaboración con un especialista en UX/UI, priorizando tanto la usabilidad como la estética visual.
 
-El sitio destaca por su diseño limpio y su funcionalidad enfocada en el usuario, facilitando la compra de comidas congeladas de alta calidad con solo unos pocos clics. La integración eficiente de las tecnologías garantiza una experiencia de compra satisfactoria y segura para todos los clientes.
+Además, un experto en analytics se encargó de optimizar el SEO del sitio para maximizar su visibilidad en los motores de búsqueda, mejorando así su alcance y atracción de nuevos clientes.
