@@ -8,8 +8,8 @@ website: "https://sessions.o61wine.com"
 github: "https://github.com/amus-dev/owine"
 ---
 
-Desarrollé un sitio web para el cliente Ö-61, una campaña en Estados Unidos cuyo objetivo es recopilar información de los usuarios participantes. En esta campaña, los usuarios deben contar una historia sobre Ami James para tener la oportunidad de ganar una sesión de tatuaje exclusiva.
+Desarrollé una campaña interactiva para un cliente de **Estados Unidos**, que permitía a los usuarios registrarse a través de un formulario y participar en un sorteo para ganar una sesión de tatuaje con el reconocido artista **Ami James**.
 
-El sitio fue creado utilizando Astro, una tecnología moderna y eficiente para la construcción de páginas web rápidas y optimizadas. Para garantizar la seguridad en la recolección de datos, se integró Google reCAPTCHA, protegiendo el sistema contra bots y automatizaciones no deseadas. En cuanto al backend, implementé PHP y MySQL, asegurando un manejo robusto y confiable de la base de datos para el almacenamiento de las historias y la información del usuario.
+El frontend del proyecto fue creado utilizando **Astro**, **JavaScript** y **Tailwind**, proporcionando una interfaz moderna y optimizada para usuarios. El formulario se conectaba a un backend desarrollado en **PHP** y **MySQL**, donde se almacenaban los datos de los participantes de manera segura. Para evitar registros automatizados y asegurar la validez de las entradas, implementamos **Google reCAPTCHA**, garantizando que solo personas reales pudieran participar.
 
-El sitio no solo proporciona una experiencia fluida y atractiva para los participantes, sino que también garantiza la protección de sus datos en todo momento, ofreciendo un entorno seguro para la interacción en línea.
+Este proyecto no solo destaca por su funcionalidad técnica, sino también por su diseño intuitivo y atractivo visual.
