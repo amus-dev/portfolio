@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -23,28 +23,28 @@ const { title, description } = Astro.props;
       rel="stylesheet"
       crossorigin
     />
-    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body>
     <slot />
-  </body><style is:global>
-    html {
-      font-family: "Poppins", system-ui, sans-serif;
-      background: #0f172a;
-      scroll-behavior: smooth;
-    }
-    code {
-      font-family:
-        Menlo,
-        Monaco,
-        Lucida Console,
-        Liberation Mono,
-        DejaVu Sans Mono,
-        Bitstream Vera Sans Mono,
-        Courier New,
-        monospace;
-    }
-  </style>
+    <style is:global>
+      html {
+        font-family: "Poppins", system-ui, sans-serif;
+        background: #0f172a;
+        scroll-behavior: smooth;
+      }
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+    </style>
+  </body>
 </html>
