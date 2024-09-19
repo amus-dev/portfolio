@@ -19,10 +19,16 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400&family=Poppins:wght@400;700&display=swap"
+      as="style"
+    />
+    <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400&family=Poppins:wght@400;700&display=swap"
       crossorigin
     />
+
     <title>{title}</title>
     <ClientRouter />
   </head>
