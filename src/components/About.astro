@@ -16,6 +16,23 @@ import IconRedux from "@assets/icons/redux.astro";
 import IconExpo from "@assets/icons/expo.astro";
 import IconApple from "@assets/icons/apple.astro";
 import IconAndroid from "@assets/icons/android.astro";
+
+const skills = [
+  { component: IconJavaScript, alt: "JavaScript" },
+  { component: IconTypeScript, alt: "TypeScript" },
+  { component: IconReact, alt: "React" },
+  { component: IconExpo, alt: "Expo" },
+  { component: IconApple, alt: "Apple" },
+  { component: IconAndroid, alt: "Android" },
+  { component: IconRedux, alt: "Redux" },
+  { component: IconAstro, alt: "Astro" },
+  { component: IconTailwind, alt: "Tailwind" },
+  { component: IconPHP, alt: "PHP" },
+  { component: IconWordPress, alt: "WordPress" },
+  { component: IconMysql, alt: "MySQL" },
+  { component: IconFigma, alt: "Figma" },
+  { component: IconVite, alt: "Vite" },
+];
 ---
 
 <section
@@ -57,49 +74,15 @@ import IconAndroid from "@assets/icons/android.astro";
       <h3 class="text-lg mt-5 font-bold text-white">
         Tecnologías con las que he trabajado
       </h3>
-      <div class="mt-5 grid grid-cols-7 place-content-center gap-2">
-        <IconJavaScript
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconTypeScript
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconReact
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconExpo
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconApple
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconAndroid
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconRedux
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconAstro
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconTailwind
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconPHP
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconWordPress
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconMysql
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconFigma
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
-        <IconVite
-          className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
-        />
+      <div class="mt-5 grid grid-cols-7 place-content-center gap-6">
+        {
+          skills.map(({ component: Icon, alt }) => (
+            <Icon
+              className="size-8 brightness-75 transition-all duration-300 hover:scale-105 hover:brightness-100"
+              aria-label={alt}
+            />
+          ))
+        }
       </div>
     </section>
   </div>
