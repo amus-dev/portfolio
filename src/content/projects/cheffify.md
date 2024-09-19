@@ -1,7 +1,7 @@
 ---
 title: Cheffify
 slug: cheffify
-description: Ecommerce de comida congelada en Santiago, con tecnología React, PHP y pagos seguros vía Transbank.
+description: Cheffify es un ecommerce de comida congelada, desarrollado en React JS con pagos seguros de Transbank y admin en WordPress.
 image_desktop: /assets/images/projects/project_desktop_cheffify.webp
 image_mobile: /assets/images/projects/project_mobile_cheffify.webp
 website: "https://cheffify.cl"
