@@ -51,7 +51,7 @@ console.log(projects);
                   class="mt-5 hidden w-full rounded-lg brightness-50 transition-all duration-300 hover:brightness-100 lg:block"
                 />
                 <img
-                  transition:name={`img-${project.slug}`}
+                  transition:name={`img-${slug}`}
                   src={image_mobile}
                   alt={`Imagen demostrativa versión mobile del sitio web ${title}`}
                   class="mt-5 block w-full rounded-lg brightness-50 transition-all duration-300 hover:brightness-100 lg:hidden"
@@ -59,7 +59,7 @@ console.log(projects);
               </a>
             </div>
             <div class="footer">
-              <a href={project.slug}>
+              <a href={slug}>
                 <p class="text-lg group relative mb-3 mt-4 w-fit text-[#7477FF] transition-colors duration-500 hover:text-white">
                   Más información
                   <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
