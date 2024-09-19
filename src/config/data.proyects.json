@@ -21,7 +21,7 @@
     "skills": ["React", "Wordpress", "Transbank"],
     "image": "/assets/images/projects/owine-cover.webp",
     "image_single_desktop": "/assets/images/projects/project_desktop_owine.webp",
-    "image_single_mobile": "/assets/images/projects/project_mobile_cheffify.webp",
+    "image_single_mobile": "/assets/images/projects/project_mobile_owine.webp",
     "website": "https://sessions.o61wine.com",
     "github": "https://github.com/amus-dev/owine"
   }
