@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import ProfilePicture from "@assets/img/profile.webp";
 ---
 
@@ -21,12 +20,11 @@ import ProfilePicture from "@assets/img/profile.webp";
       >. He entregado soluciones de alta calidad en entornos dinámicos.
     </p>
   </div>
-  <div class="block">
-    <Image
-      class="rounded-xl shadow-md"
-      src={ProfilePicture}
+  <div>
+    <img
+      class="w-full max-w-[600px] rounded-xl shadow-md"
+      src={ProfilePicture.src}
       alt="Imagen de perfil de Matias, tomando una taza de café"
-      width={600}
     />
   </div>
 </section>

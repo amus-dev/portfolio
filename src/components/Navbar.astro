@@ -11,7 +11,6 @@ const MENU_LINKS = [
   },
 ];
 
-import { Image } from "astro:assets";
 import Logo from "@assets/img/logos/logo.webp";
 ---
 
@@ -23,11 +22,10 @@ import Logo from "@assets/img/logos/logo.webp";
     href="/"
     aria-label="Link a la página principal del portafolio"
   >
-    <Image
-      class="transition-all duration-300 hover:scale-105"
-      src={Logo}
-      alt="Logo de CodeAmus, el nombre mio como empresa"
-      width={120}
+    <img
+      class="w-full max-w-[120px] transition-all duration-300 hover:scale-105"
+      src={Logo.src}
+      alt="Logo de mi marca personal Codeamus"
     />
   </a>
   <ul class="flex flex-row items-center gap-2">
@@ -39,6 +37,7 @@ import Logo from "@assets/img/logos/logo.webp";
             href={link.href}
             target={link.newTab ? "_blank" : "_self"}
             rel="noopener noreferrer"
+            aria-label="Link a la página principal del portafolio"
           >
             {link.newTab ? (
               <svg
