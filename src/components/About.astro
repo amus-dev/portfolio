@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import ProfilePicture from "@assets/img/profile.webp";
+import ProfilePicture from "@assets/img/about-me.webp";
 // ICONS SKILLS
 import IconJavaScript from "@assets/icons/javascript.astro";
 import IconTypeScript from "@assets/icons/typescript.astro";
@@ -24,10 +24,9 @@ import IconAndroid from "@assets/icons/android.astro";
 >
   <div class="hidden lg:block">
     <Image
-      class="rounded-xl shadow-md"
+      class="aspect-[4/3] rounded-xl shadow-md"
       src={ProfilePicture}
-      alt="Imagen de perfil de Matias, tomando una taza de café"
-      width={600}
+      alt="Imagen de perfil de Matias, programando en un macbook"
     />
   </div>
   <div class="w-fit">
