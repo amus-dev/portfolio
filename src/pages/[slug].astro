@@ -52,9 +52,11 @@ export const prerender = true;
       />
     </section>
     <section>
-      <h2 class="mt-5 text-2xl font-bold text-[#7477FF]">Descripción</h2>
-      <p class="text-lg mt-3 text-pretty text-white">{description}</p>
-      <h2 class="my-4 text-2xl font-bold text-[#7477FF]">Tecnologías</h2>
+      <h2 class="mt-8 text-2xl font-bold text-[#7477FF]">Descripción</h2>
+      <div class="prose prose-invert max-w-none">
+        <Content />
+      </div>
+      <h2 class="mt-8 text-2xl font-bold text-[#7477FF]">Tecnologías</h2>
       <ul>
         <li>
           <IconReact
