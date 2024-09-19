@@ -17,17 +17,22 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 
 const { data, slug } = project;
-const { title, description, image_desktop, image_mobile, github, website } =
-  data;
+const {
+  title,
+  description,
+  image_desktop,
+  image_mobile,
+  github,
+  website,
+  metaTitle,
+  metaDescription,
+} = data;
 
 const { Content } = await render(project);
 export const prerender = true;
 ---
 
-<Layout
-  title="Project - Software Developer"
-  description="¡Bienvenido a mi portafolio! Soy un apasionado desarrollador de software con seis años de experiencia. Explora mi perfil para descubrir proyectos innovadores, soluciones creativas y mi dedicación para crear software de calidad. ¡Conoce más sobre mi trayectoria y habilidades en el mundo del desarrollo de software!"
->
+<Layout title={metaTitle} description={metaDescription}>
   <Navbar />
   <main class="px-10 py-7 md:px-20 xl:px-72">
     <section>
